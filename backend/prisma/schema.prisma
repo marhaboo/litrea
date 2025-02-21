@@ -16,17 +16,18 @@ model Author {
 }
 
 model Books {
-  id  String @id @default(uuid())
-  title String 
+  id     String @id @default(uuid())
+  title  String
   author String
-  price Float
-  image String
+  price  Float
+  image  String
 }
 
 model User {
-  id String @id @default(uuid())
-  email String @unique
-  password String
-  name String?
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String   @unique
+  image     String?
   createdAt DateTime @default(now())
 }

@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import authorRoutes from "./routes/authorRoutes.js";
 import bookRoutes from "./routes/bookRoutes.js";
-import authRoutes from "./routes/authRoutes";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -19,7 +18,6 @@ app.use(
 // Используем маршруты
 app.use(authorRoutes);
 app.use(bookRoutes);
-app.use(authRoutes);
 
 const PORT = 5000;
 app.listen(PORT, () => {
